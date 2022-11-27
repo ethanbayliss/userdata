@@ -15,3 +15,4 @@ curl https://github.com/ethanbayliss.keys -s | tee -a ~/.ssh/authorized_keys;\
 chmod 644 ~/.ssh/authorized_keys'
 
 sed -i 's/^#PermitRootLogin\ .*$/PermitRootLogin no/g' /etc/ssh/sshd_config
+systemctl restart sshd
